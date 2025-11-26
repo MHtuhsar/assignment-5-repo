@@ -49,7 +49,7 @@ emergencyCallButton.addEventListener("click", function () {
         return;
     }
 
-    alert("📞Calling to " + emergencyService + callingEmergency + ".....");
+    alert("📞 Calling to " + emergencyService + callingEmergency + " .....");
 
 
     subtractCoins = subtractCoins - 20;
@@ -99,7 +99,7 @@ policeHelplineButton.addEventListener("click", function () {
         return;
     }
 
-    alert("📞Calling to " + policeHelpline + policeNumber + ".....");
+    alert("📞 Calling to " + policeHelpline + policeNumber + " .....");
 
     subtractCoins = subtractCoins - 20;
     currentCoins.innerText = subtractCoins;
@@ -149,7 +149,7 @@ const fireServicebutton = getId("fire-service-btn").
             return;
         }
 
-        alert("📞Calling to " + fireService + fireNumber + ".....");
+        alert("📞 Calling to " + fireService + fireNumber + " .....");
 
         subtractCoins = subtractCoins - 20;
         currentCoins.innerText = subtractCoins;
@@ -193,7 +193,7 @@ getId("ambulance-service-btn").addEventListener("click", function () {
         return;
     }
 
-    alert("📞Calling to " + ambulanceService + ambulanceNumber + ".....");
+    alert("📞 Calling to " + ambulanceService + ambulanceNumber + " .....");
 
     subtractCoins = subtractCoins - 20;
     currentCoins.innerText = subtractCoins;
@@ -201,7 +201,7 @@ getId("ambulance-service-btn").addEventListener("click", function () {
 
     // data for call history 
     const data = {
-        serviceName: "Fire Service",
+        serviceName: "Ambulance Service",
         phone: "1994-999999",
         date: new Date().toLocaleTimeString()
     }
@@ -239,7 +239,7 @@ getId("women-child-helpline-btn").addEventListener("click", function () {
         return;
     }
 
-    alert("📞Calling to " + womenAndChildHelpline + womenAndChildNumber + ".....");
+    alert("📞 Calling to " + womenAndChildHelpline + womenAndChildNumber + " .....");
 
     subtractCoins = subtractCoins - 20;
     currentCoins.innerText = subtractCoins;
@@ -284,7 +284,7 @@ getId("anti-corruption-btn").addEventListener("click", function () {
         return;
     }
 
-    alert("📞Calling to " + antiCorruptionService + antiCorruptionNumber + ".....");
+    alert("📞 Calling to " + antiCorruptionService + antiCorruptionNumber + " .....");
 
     subtractCoins = subtractCoins - 20;
     currentCoins.innerText = subtractCoins;
@@ -326,7 +326,7 @@ getId("electricity-helpline-btn").addEventListener("click", function () {
         return;
     }
 
-    alert("📞Calling to " + electricityHelpline + electricityHelplineNumber + ".....");
+    alert("📞 Calling to " + electricityHelpline + electricityHelplineNumber + " .....");
 
     subtractCoins = subtractCoins - 20;
     currentCoins.innerText = subtractCoins;
@@ -369,7 +369,7 @@ getId("brac-helpline-btn").addEventListener("click", function () {
         return;
     }
 
-    alert("📞Calling to " + bracHelpline + bracHelplineNumber + ".....");
+    alert("📞 Calling to " + bracHelpline + bracHelplineNumber + " .....");
 
     subtractCoins = subtractCoins - 20;
     currentCoins.innerText = subtractCoins;
@@ -412,7 +412,7 @@ getId("railway-helpline-btn").addEventListener("click", function () {
         return;
     }
 
-    alert("📞Calling to " + railwayHelpline + railwayHelplineNumber + ".....");
+    alert("📞 Calling to " + railwayHelpline + railwayHelplineNumber + " .....");
 
     subtractCoins = subtractCoins - 20;
     currentCoins.innerText = subtractCoins;
@@ -438,7 +438,24 @@ getId("railway-helpline-btn").addEventListener("click", function () {
                         </div>`
 
     history.appendChild(div);
-})
+
+
+});
+
+
+
+
+
+// history clear button to remove all histories:
+
+getId("clear-btn").addEventListener("click", function () {
+
+
+    const history = getId("history");
+    history.innerHTML = ``;
+});;
+
+
 
 
 
