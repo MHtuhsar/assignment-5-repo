@@ -32,6 +32,11 @@ for (const heart of hearts) {
 
 
 
+
+
+
+
+
 // All Call buttons function :
 
 // emergency service -----------------------------------------
@@ -443,10 +448,7 @@ getId("railway-helpline-btn").addEventListener("click", function () {
 });
 
 
-
-
-
-// history clear button to remove all histories:
+// history clear button function to remove all histories:
 
 getId("clear-btn").addEventListener("click", function () {
 
@@ -454,6 +456,31 @@ getId("clear-btn").addEventListener("click", function () {
     const history = getId("history");
     history.innerHTML = ``;
 });;
+
+
+
+// Copy button functionalities : 
+
+
+const copyCount = getId("copy-count");
+const copyButtons = getClass("copy-btn");
+
+for (const button of copyButtons) {
+    button.addEventListener("click", function () {
+
+        let addCopyCount = parseInt(copyCount.innerText);
+
+        const card = button.closest(".card");
+        const serviceNumber = card.querySelector(".service-number").innerText;
+        navigator.clipboard.writeText(serviceNumber);
+        alert(`Copied:${serviceNumber}`);
+
+        addCopyCount = addCopyCount + 1;
+        copyCount.innerText = addCopyCount;
+    })
+}
+
+
 
 
 
